@@ -1,0 +1,24 @@
+{% extends 'show.html' %} 
+{% block content %}
+<h1 style="text-align: center">Dealer List</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Dealer ID</th>
+			<th>Name</th>
+			<th>Address</th>
+			<th>Phone</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for dealer in dealers %}
+		<tr>
+			<td>{{ dealer.dealer_id }}</td>
+			<td>{{ dealer.name }}</td>
+			<td>{{ dealer.address }}</td>
+			<td>{{ dealer.phone }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}

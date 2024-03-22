@@ -1,0 +1,24 @@
+{% extends 'show.html' %} 
+{% block content %}
+<h1 style="text-align: center">Bill Total per Customer per Store</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Bill ID</th>
+			<th>Customer ID</th>
+			<th>Store ID</th>
+			<th>Total</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for total_bill in total_bills %}
+		<tr>
+			<td>{{ total_bill.bill_id }}</td>
+			<td>{{ total_bill.cust_id }}</td>
+			<td>{{ total_bill.store_id }}</td>
+			<td>{{ total_bill.total_bill }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}

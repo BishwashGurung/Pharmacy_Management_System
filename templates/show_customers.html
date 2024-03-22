@@ -1,0 +1,24 @@
+{% extends 'show.html' %} 
+{% block content %}
+<h1 style="text-align: center">Customer List</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Customer ID</th>
+			<th>Name</th>
+			<th>Address</th>
+			<th>Phone</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for customer in customers %}
+		<tr>
+			<td>{{ customer.cust_id }}</td>
+			<td>{{ customer.name }}</td>
+			<td>{{ customer.address }}</td>
+			<td>{{ customer.phone }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}

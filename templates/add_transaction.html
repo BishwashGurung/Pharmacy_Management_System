@@ -1,0 +1,90 @@
+{% extends 'form.html' %} 
+{% block content %}
+<div style="margin: auto; width: 50vw">
+	<h1 style="text-align: center">Add Transaction Info</h1>
+	<form
+		method="post"
+		style="padding: 0% 35%; width: full; text-align: center"
+	>
+		{% csrf_token %}
+		<label for="bill_id" style="font-weight: bold; display: inline-block">
+			Bill ID:
+		</label>
+		<br />
+		<input
+			type="number"
+			id="bill_id"
+			name="bill_id"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="cust_id" class="formLabel">Customer ID:</label>
+		<br />
+		<input
+			type="number"
+			id="cust_id"
+			name="cust_id"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="store_id" class="formLabel">Store ID:</label>
+		<br />
+		<input
+			type="text"
+			id="store_id"
+			name="store_id"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="med_id" class="formLabel">Medicine ID:</label>
+		<br />
+		<input
+			type="number"
+			id="med_id"
+			name="med_id"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="quantity" class="formLabel">Quantity:</label>
+		<br />
+		<input
+			type="number"
+			id="quantity"
+			name="quantity"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="trans_date" class="formLabel">Transaction Date:</label>
+		<br />
+		<input
+			type="date"
+			id="trans_date"
+			name="trans_date"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<input
+			type="submit"
+			value="Submit"
+			style="
+				margin-top: 6px;
+				background-color: #4caf50;
+				color: antiquewhite;
+				border-radius: 5px;
+			"
+		/>
+	</form>
+</div>
+{% endblock content %}

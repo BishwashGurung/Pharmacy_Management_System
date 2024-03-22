@@ -1,0 +1,28 @@
+{% extends 'show.html' %} 
+{% block content %}
+<h1 style="text-align: center">Purchase List</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Purchase ID</th>
+			<th>Medicine ID</th>
+			<th>Store ID</th>
+			<th>Dealer ID</th>
+			<th>Quantity Supplied</th>
+			<th>Purchase Cost</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for purchase in purchases %}
+		<tr>
+			<td>{{ purchase.purchase_id }}</td>
+			<td>{{ purchase.med_id.med_id }}</td>
+			<td>{{ purchase.store_id.store_id }}</td>
+			<td>{{ purchase.dealer_id.dealer_id }}</td>
+			<td>{{ purchase.quantity_supplied }}</td>
+			<td>{{ purchase.purchase_cost }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}

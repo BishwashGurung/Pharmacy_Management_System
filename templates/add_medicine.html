@@ -1,0 +1,105 @@
+{% extends 'form.html' %} 
+{% block content %}
+<div style="margin: auto; width: 50vw">
+	<h1 style="text-align: center">Add Medicine Info</h1>
+	<form
+		method="post"
+		style="padding: 0% 35%; width: full; text-align: center"
+	>
+		{% csrf_token %}
+		<label for="med_id" style="font-weight: bold; display: inline-block">
+			Medicine ID:
+		</label>
+		<br />
+		<input
+			type="number"
+			id="med_id"
+			name="med_id"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="name" class="formLabel">Name:</label>
+		<br />
+		<input type="text" id="name" name="name" required class="formInput" />
+		<br />
+
+		<label for="composition" class="formLabel">Composition:</label>
+		<br />
+		<input
+			type="text"
+			id="composition"
+			name="composition"
+			class="formInput"
+		/>
+		<br />
+
+		<label for="mfg_date" class="formLabel">Manufacturing Date:</label>
+		<br />
+		<input
+			type="date"
+			id="mfg_date"
+			name="mfg_date"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="exp_date" class="formLabel">Expiry Date:</label>
+		<br />
+		<input
+			type="date"
+			id="exp_date"
+			name="exp_date"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="cost_per_tab" class="formLabel">Cost Per Tablet:</label>
+		<br />
+		<input
+			type="number"
+			id="cost_per_tab"
+			name="cost_per_tab"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="mrp_per_tab" class="formLabel">MRP Per Tablet:</label>
+		<br />
+		<input
+			type="number"
+			id="mrp_per_tab"
+			name="mrp_per_tab"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="manufacturer" class="formLabel">Manufacturer:</label>
+		<br />
+		<input
+			type="text"
+			id="manufacturer"
+			name="manufacturer"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<input
+			type="submit"
+			value="Submit"
+			style="
+				margin-top: 6px;
+				background-color: #4caf50;
+				color: antiquewhite;
+				border-radius: 5px;
+			"
+		/>
+	</form>
+</div>
+{% endblock content %}

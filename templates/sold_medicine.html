@@ -1,0 +1,26 @@
+{% extends 'show.html' %} 
+{% block content %}
+<h1 style="text-align: center">Sold Medicnes per Store</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Store ID</th>
+			<th>Store Name</th>
+			<th>Medicine ID</th>
+			<th>Medicine Name</th>
+			<th>Quantity</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for sold_medicine in sold_medicines %}
+		<tr>
+			<td>{{ sold_medicine.store_id }}</td>
+			<td>{{ sold_medicine.store_id__name }}</td>
+			<td>{{ sold_medicine.med_id }}</td>
+			<td>{{ sold_medicine.med_id__name }}</td>
+			<td>{{ sold_medicine.total_quantity_sold }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}

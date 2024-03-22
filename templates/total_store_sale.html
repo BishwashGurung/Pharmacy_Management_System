@@ -1,0 +1,22 @@
+{% extends 'show.html' %} 
+{% block content %}
+<h1 style="text-align: center">Total Sale Per Store</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Store ID</th>
+			<th>Name</th>
+			<th>Total Sale</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for total_sale in total_sales %}
+		<tr>
+			<td>{{ total_sale.store_id }}</td>
+			<td>{{ total_sale.name }}</td>
+			<td>{{ total_sale.total_sale }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}

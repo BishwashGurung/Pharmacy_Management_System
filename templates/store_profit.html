@@ -1,0 +1,24 @@
+{% extends 'show.html' %} 
+{% block content %}
+<h1 style="text-align: center">Profit Per Store</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Store ID</th>
+			<th>Store Name</th>
+			<th>Store Runner</th>
+			<th>Profit</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for store_profit in store_profits %}
+		<tr>
+			<td>{{ store_profit.store_id }}</td>
+			<td>{{ store_profit.store_id__name }}</td>
+			<td>{{ store_profit.store_id__store_runner }}</td>
+			<td>{{ store_profit.profit }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}

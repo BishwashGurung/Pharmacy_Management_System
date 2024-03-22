@@ -1,0 +1,73 @@
+{% extends 'form.html' %} 
+{% block content %}
+<div style="margin: auto; width: 50vw">
+	<h1 style="text-align: center">Add Store Info</h1>
+	<form
+		method="post"
+		style="padding: 0% 35%; width: full; text-align: center"
+	>
+		{% csrf_token %}
+		<label for="store_id" style="font-weight: bold; display: inline-block">
+			Store ID:
+		</label>
+		<br />
+		<input
+			type="text"
+			id="store_id"
+			name="store_id"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="name" class="formLabel">Name:</label>
+		<br />
+		<input type="text" id="name" name="name" required class="formInput" />
+		<br />
+
+		<label for="address" class="formLabel">Address:</label>
+		<br />
+		<input
+			type="text"
+			id="address"
+			name="address"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="contact" class="formLabel">Contact:</label>
+		<br />
+		<input
+			type="text"
+			id="contact"
+			name="constact"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<label for="store_runner" class="formLabel">Store Runner:</label>
+		<br />
+		<input
+			type="text"
+			id="store_runner"
+			name="store_runner"
+			required
+			class="formInput"
+		/>
+		<br />
+
+		<input
+			type="submit"
+			value="Submit"
+			style="
+				margin-top: 6px;
+				background-color: #4caf50;
+				color: antiquewhite;
+				border-radius: 5px;
+			"
+		/>
+	</form>
+</div>
+{% endblock content %}

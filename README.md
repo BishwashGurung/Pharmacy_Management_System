@@ -1,0 +1,1 @@
+This a pharmacy management system project created using python, django framework and MySQL for database.

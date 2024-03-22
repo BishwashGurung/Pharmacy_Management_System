@@ -1,0 +1,32 @@
+{% extends 'show.html' %} 
+{% block content %}
+<h1 style="text-align: center">Medicine List</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Medicine ID</th>
+			<th>Name</th>
+			<th>Composition</th>
+			<th>Mfg Date</th>
+			<th>Exp Date</th>
+			<th>Cost Per Tab</th>
+			<th>MRP Per Tab</th>
+			<th>Manufacturer</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for medicine in medicines %}
+		<tr>
+			<td>{{ medicine.med_id }}</td>
+			<td>{{ medicine.name }}</td>
+			<td>{{ medicine.composition }}</td>
+			<td>{{ medicine.mfg_date }}</td>
+			<td>{{ medicine.exp_date }}</td>
+			<td>{{ medicine.cost_per_tab }}</td>
+			<td>{{ medicine.mrp_per_tab }}</td>
+			<td>{{ medicine.manufacturer }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}

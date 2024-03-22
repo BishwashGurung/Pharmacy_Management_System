@@ -1,0 +1,34 @@
+{% extends 'show.html' %} 
+{% block content %}
+<h1 style="text-align: center">Not Expired Medicines</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Medicine ID</th>
+			<th>Medicine Name</th>
+			<th>Composition</th>
+			<th>MFG Date</th>
+			<th>EXP Date</th>
+			<th>Cost Per Tab</th>
+			<th>MRP Per Tab</th>
+			<th>Store ID</th>
+			<th>Quantity</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for unexpired_medicine in unexpired_medicines %}
+		<tr>
+			<td>{{ unexpired_medicine.med_id }}</td>
+			<td>{{ unexpired_medicine.med_id__name }}</td>
+			<td>{{ unexpired_medicine.med_id__composition }}</td>
+			<td>{{ unexpired_medicine.med_id__mfg_date }}</td>
+			<td>{{ unexpired_medicine.med_id__exp_date }}</td>
+			<td>{{ unexpired_medicine.med_id__cost_per_tab }}</td>
+			<td>{{ unexpired_medicine.med_id__mrp_per_tab }}</td>
+			<td>{{ unexpired_medicine.store_id }}</td>
+			<td>{{ unexpired_medicine.quantity }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}

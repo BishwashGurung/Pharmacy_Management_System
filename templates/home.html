@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pharmacy Management System</title>
+	</head>
+	<style>
+        .buttonWrapper {
+            margin-top: 50px;
+			margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+		.myButton {
+			display: inline-block;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			background-color: #4caf50;
+			color: white;
+			font-size: 16px;
+			text-decoration: none; /* Remove underline from anchor */
+		}
+		.myButton:hover {
+			background-color: #45a049;
+		}
+	</style>
+	<body>
+		{% include 'navbar.html' %}
+		<div class="buttonWrapper">
+            <a href="add_medicine/" class="myButton">Add Medicine</a>
+            <a href="add_store/" class="myButton">Add Store</a>
+            <a href="add_dealer/" class="myButton">Add Dealer</a>
+            <a href="add_purchase/" class="myButton">Add Puchase</a>
+            <a href="add_customer/" class="myButton">Add Customer</a>
+            <a href="add_transaction/" class="myButton">Add Transaction</a>
+        </div>
+		<div class="buttonWrapper">
+            <a href="show_medicines/" class="myButton">Show Medicine Info</a>
+			<a href="show_stores/" class="myButton">Show Stores</a>
+			<a href="show_dealers/" class="myButton">Show Dealers</a>
+			<a href="show_purchases/" class="myButton">Show Purchases</a>
+			<a href="show_customers/" class="myButton">Show Customers</a>
+			<a href="show_transactions/" class="myButton">Show Transactions</a>
+			<a href="show_quants/" class="myButton">Show Quantity</a>
+        </div>
+		<div class="buttonWrapper">
+            <a href="total_bills/" class="myButton">Bills Per Customer</a>
+            <a href="total_store_sale/" class="myButton">Total Sale Per Store</a>
+            <a href="unsold_medicine/" class="myButton">Unsold Medicine Per Store</a>
+            <a href="sold_medicine/" class="myButton">Sold Medicine Per Store</a>
+			<a href="most_sold_medicine/" class="myButton">Most Sold Medicine</a>
+        </div>
+		<div class="buttonWrapper">
+            <a href="expired_medicines/" class="myButton">Expired Medicines</a>
+            <a href="unexpired_medicines/" class="myButton">Not Expired Medicines</a>
+            <a href="transaction_profit/" class="myButton">Profit Per Transaction</a>
+            <a href="manufacturer_profit/" class="myButton">Profit Per Manufacturer</a>
+            <a href="store_profit/" class="myButton">Profit Per Store</a>
+        </div>
+	</body>
+</html>

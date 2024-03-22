@@ -1,0 +1,30 @@
+{% extends 'show.html' %} 
+{% block content %}
+<h1 style="text-align: center">Transaction List</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Bill ID</th>
+			<th>Customer ID</th>
+			<th>Store ID</th>
+			<th>Medicine ID</th>
+			<th>Quantity</th>
+			<th>Transaction Date</th>
+			<th>Total Cost</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for transaction in transactions %}
+		<tr>
+			<td>{{ transaction.bill_id }}</td>
+			<td>{{ transaction.cust_id.cust_id }}</td>
+			<td>{{ transaction.store_id.store_id }}</td>
+			<td>{{ transaction.med_id.med_id }}</td>
+			<td>{{ transaction.quantity }}</td>
+			<td>{{ transaction.trans_date }}</td>
+			<td>{{ transaction.total }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}
