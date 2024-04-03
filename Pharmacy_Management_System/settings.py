@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Pharmacy_Management_System',
         'USER': 'root',
-        'PASSWORD': 'your_mysql_db_password',
+        'PASSWORD': 'your-password',
         'HOST': 'localhost',  # Or your MySQL server IP address
         'PORT': '3306',  # MySQL default port
     }
